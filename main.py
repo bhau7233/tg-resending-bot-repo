@@ -2,6 +2,15 @@ import discord
 import telegram
 import os
 
+# Discord client setup
+discord_token = 'YOUR_DISCORD_TOKEN_HERE'
+
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print('Discord client is ready.')
+
 @client.event
 async def on_message(message):
     if message.channel.id == 'TARGET_DISCORD_CHANNEL_ID_HERE':
